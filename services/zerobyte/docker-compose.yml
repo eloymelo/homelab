@@ -10,12 +10,12 @@ services:
     devices:
       - /dev/fuse:/dev/fuse
     environment:
-      - TZ=America/Fortaleza
-      - BASE_URL=http://your-server-ip:4096
-      - APP_SECRET=change_me_generate_a_random_secret
+      - TZ=America/Fortaleza # Set your timezone here
+      - BASE_URL=http://localhost:4096 # URL you will use to access Zerobyte
+      - APP_SECRET=change_me_generate_a_random_secret # Generate your own secret with `openssl rand -hex 32`
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/lib/zerobyte:/var/lib/zerobyte
-      - /home/titan:/home
-      - /media/backup1:/backup1
-      - /media/backup2:/backup2
+      - /home/titan:/home # Change it to the path you want to backup
+      - /media/backup1:/backup1 # Optional
+      - /media/backup2:/backup2 # Optional

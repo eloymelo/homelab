@@ -1,0 +1,16 @@
+services:
+  nextcloud-aio-mastercontainer:
+    image: ghcr.io/nextcloud-releases/all-in-one:latest
+    init: true
+    restart: always
+    ports:
+    - "8080:8080"
+    volumes:
+      - nextcloud_aio_mastercontainer:/mnt/docker-aio-config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - NEXTCLOUD_DATADIR=/home/titan/nextcloud/ncdata
+      - SKIP_DOMAIN_VALIDATION=true
+      - APACHE_PORT=11000
+      - APACHE_IP_BINDING=0.0.0.0
+      - NEXTCLOUD_URL="https://nextcloud.eloymelo.com"

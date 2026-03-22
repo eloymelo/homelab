@@ -1,0 +1,13 @@
+services:
+  audiobookshelf:
+    image: ghcr.io/advplyr/audiobookshelf
+    restart: unless-stopped
+    ports:
+      - "13378:80"
+    volumes:
+      - /home/eloy/audiobookshelf/config:/config
+      - /home/eloy/audiobookshelf/metadata:/metadata
+      - /home/eloy/audiobookshelf/audiobooks:/audiobooks
+      - /home/eloy/audiobookshelf/podcasts:/podcasts
+    environment:
+      - TZ=America/Fortaleza

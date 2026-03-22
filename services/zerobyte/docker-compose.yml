@@ -1,0 +1,21 @@
+services:
+  zerobyte:
+    image: ghcr.io/nicotsx/zerobyte:v0.25
+    container_name: zerobyte
+    restart: unless-stopped
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - "4096:4096"
+    devices:
+      - /dev/fuse:/dev/fuse
+    environment:
+      - TZ=America/Fortaleza
+      - BASE_URL=http://your-server-ip:4096
+      - APP_SECRET=change_me_generate_a_random_secret
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/lib/zerobyte:/var/lib/zerobyte
+      - /home/titan:/home
+      - /media/backup1:/backup1
+      - /media/backup2:/backup2

@@ -24,7 +24,7 @@ Router
 Linux Server (your-server-ip)
     │
     ├── AdGuard Home  → DNS for all devices on the network
-    ├── Nextcloud     → Cloud storage (exposed via nextcloud.eloymelo.com)
+    ├── Nextcloud     → Cloud storage (exposed via nextcloud.your-domain.com)
     ├── ZeroByte      → File manager + backup drives
     ├── SearXNG       → Private search
     └── Audiobookshelf→ Media server
@@ -50,7 +50,8 @@ cd services/adguard
 docker compose up -d
 ```
 
-## About
+## Prerequisites
 
-IT professional focused on building a DevOps career through hands-on homelabbing.
-Comfortable with Linux, Docker, Git, and Bash.
+- Linux server (Debian/Ubuntu recommended)
+- Docker and Docker Compose installed
+- Basic familiarity with the terminal

@@ -1,6 +1,7 @@
 services:
   nextcloud-aio-mastercontainer:
     image: ghcr.io/nextcloud-releases/all-in-one:latest
+    container_name: nextcloud_aio_mastercontainer
     init: true
     restart: always
     ports:
@@ -14,3 +15,6 @@ services:
       - APACHE_PORT=11000
       - APACHE_IP_BINDING=0.0.0.0
       - NEXTCLOUD_URL="https://nextcloud.your-domain.com"
+volumes:
+  nextcloud_aio_mastercontainer:
+    name: nextcloud_aio_mastercontainer

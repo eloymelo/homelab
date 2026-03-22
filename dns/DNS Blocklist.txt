@@ -1,0 +1,23 @@
+Pi-Hole List
+https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+
+Gambling - Protects against gambling content!
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/gambling.txt
+
+OISD NSFW
+https://nsfw.oisd.nl
+
+OISD Big
+https://big.oisd.nl
+
+Threat Intelligence Feeds - Increases security significantly! (Recommended)
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.txt
+
+NSFW - Protects against adult content!
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/nsfw.txt
+
+Pop-Up Ads - Protects against annoying and malicious pop-up ads!
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/popupads.txt
+
+Multi PRO++ - Maximum protection
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.txt

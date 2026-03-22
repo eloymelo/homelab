@@ -13,4 +13,4 @@ services:
       - SKIP_DOMAIN_VALIDATION=true
       - APACHE_PORT=11000
       - APACHE_IP_BINDING=0.0.0.0
-      - NEXTCLOUD_URL="https://nextcloud.eloymelo.com"
+      - NEXTCLOUD_URL="https://nextcloud.your-domain.com"

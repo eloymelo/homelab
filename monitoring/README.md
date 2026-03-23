@@ -31,7 +31,7 @@ docker compose up -d
 
 Access Grafana at `http://your-server-ip:3001`
 
-Default credentials: `admin` / `admin` — change on first login.
+Default credentials: `admin` / `admin` (change it on first login)
 
 ## Notes
 

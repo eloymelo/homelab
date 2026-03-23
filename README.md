@@ -5,6 +5,7 @@ Built and maintained as a hands-on DevOps learning environment and portfolio.
 
 ## Stack
 
+### Services
 | Service | Purpose | Port |
 |---------|---------|------|
 | [AdGuard Home](services/adguard/) | Network-wide DNS ad blocking | 3000 |
@@ -13,6 +14,13 @@ Built and maintained as a hands-on DevOps learning environment and portfolio.
 | [SearXNG](services/searxng/) | Private metasearch engine | 8888 |
 | [Audiobookshelf](services/audiobookshelf/) | Audiobook and podcast server | 13378 |
 | [Immich](services/immich/) | Self-hosted photo and video backup | 2283 |
+
+### Monitoring
+| Service | Purpose | Port |
+|---------|---------|------|
+| [Prometheus](monitoring/) | Metrics collection and storage | 9090 |
+| [cAdvisor](monitoring/) | Container metrics exporter | 8081 |
+| [Grafana](monitoring/) | Metrics visualization and dashboards | 3001 |
 
 ## Network Overview
 ```
@@ -29,7 +37,8 @@ Linux Server (your-server-ip)
     ├── ZeroByte       → File manager + backup drives
     ├── SearXNG        → Private search
     ├── Audiobookshelf → Media server
-    └── Immich         → Self-hosted photo and video backup
+    ├── Immich         → Self-hosted photo and video backup
+    └── Grafana        → Container and system monitoring (local only)
 ```
 
 ## Structure
@@ -38,6 +47,8 @@ homelab/
 ├── docs/
 │   ├── cloudflare-tunnel.md
 │   └── sshfs-windows.md
+├── monitoring/
+│   └── prometheus/
 ├── services/
 │   ├── adguard/
 │   ├── audiobookshelf/

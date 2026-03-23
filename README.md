@@ -12,6 +12,7 @@ Built and maintained as a hands-on DevOps learning environment and portfolio.
 | [ZeroByte](services/zerobyte/) | File manager with backup support | 4096 |
 | [SearXNG](services/searxng/) | Private metasearch engine | 8888 |
 | [Audiobookshelf](services/audiobookshelf/) | Audiobook and podcast server | 13378 |
+| [Immich](services/immich/) | Self-hosted photo and video backup | 2283 |
 
 ## Network Overview
 ```
@@ -23,11 +24,12 @@ Router
     ▼
 Linux Server (your-server-ip)
     │
-    ├── AdGuard Home  → DNS for all devices on the network
-    ├── Nextcloud     → Cloud storage (exposed via nextcloud.your-domain.com)
-    ├── ZeroByte      → File manager + backup drives
-    ├── SearXNG       → Private search
-    └── Audiobookshelf→ Media server
+    ├── AdGuard Home   → DNS for all devices on the network
+    ├── Nextcloud      → Cloud storage (exposed via nextcloud.your-domain.com)
+    ├── ZeroByte       → File manager + backup drives
+    ├── SearXNG        → Private search
+    ├── Audiobookshelf → Media server
+    └── Immich         → Self-hosted photo and video backup
 ```
 
 ## Structure
@@ -35,10 +37,11 @@ Linux Server (your-server-ip)
 homelab/
 ├── services/
 │   ├── adguard/
+│   ├── audiobookshelf/
+│   ├── immich/
 │   ├── nextcloud/
-│   ├── zerobyte/
 │   ├── searxng/
-│   └── audiobookshelf/
+│   └── zerobyte/
 └── dns/
 ```
 

@@ -35,6 +35,9 @@ Linux Server (your-server-ip)
 ## Structure
 ```
 homelab/
+├── docs/
+│   ├── cloudflare-tunnel.md
+│   └── sshfs-windows.md
 ├── services/
 │   ├── adguard/
 │   ├── audiobookshelf/
@@ -45,6 +48,12 @@ homelab/
 └── dns/
 ```
 
+## Prerequisites
+
+- Linux server (Debian/Ubuntu recommended)
+- Docker and Docker Compose installed
+- Basic familiarity with the terminal
+
 ## Running a Service
 
 Each service folder contains a `docker-compose.yml` and a `README.md`.
@@ -53,8 +62,9 @@ cd services/adguard
 docker compose up -d
 ```
 
-## Prerequisites
+## Guides
 
-- Linux server (Debian/Ubuntu recommended)
-- Docker and Docker Compose installed
-- Basic familiarity with the terminal
+| Guide | Description |
+|-------|-------------|
+| [Cloudflare Tunnel](docs/cloudflare-tunnel.md) | Exposing services to the internet without opening router ports |
+| [SSHFS on Windows](docs/sshfs-windows.md) | Mounting remote server folders on Windows over SSH |

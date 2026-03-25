@@ -20,5 +20,9 @@ jobs:
         run: |
           find . -name "docker-compose.yml" | while read file; do
             echo "Validating $file"
+            dir=$(dirname "$file")
+            if [ -f "$dir/.env.example" ]; then
+              cp "$dir/.env.example" "$dir/.env"
+            fi
             docker compose -f "$file" config --quiet
           done

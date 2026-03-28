@@ -14,6 +14,7 @@ Built and maintained as a hands-on DevOps learning environment and portfolio.
 | [SearXNG](services/searxng/) | Private metasearch engine | 8888 |
 | [Audiobookshelf](services/audiobookshelf/) | Audiobook and podcast server | 13378 |
 | [Immich](services/immich/) | Self-hosted photo and video backup | 2283 |
+| [Degoog](services/degoog/) | Self-hosted search aggregator | 4444 |
 
 ### Monitoring
 | Service | Purpose | Port |
@@ -38,6 +39,7 @@ Linux Server (your-server-ip)
     ├── SearXNG        → Private search
     ├── Audiobookshelf → Media server
     ├── Immich         → Self-hosted photo and video backup
+    ├── Degoog         → Self-hosted search aggregator
     └── Grafana        → Container and system monitoring (local only)
 ```
 
@@ -52,6 +54,7 @@ homelab/
 ├── services/
 │   ├── adguard/
 │   ├── audiobookshelf/
+│   ├── degoog/
 │   ├── immich/
 │   ├── nextcloud/
 │   ├── searxng/

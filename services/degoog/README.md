@@ -19,6 +19,6 @@ docker compose up -d
 ```
 
 ## Notes
-- Data is persisted in `./data` — do not delete this folder
+- Data is persisted in `./data` (do not delete this folder)
 - Still in beta, not intended for production use
 - Full documentation at https://fccview.github.io/degoog

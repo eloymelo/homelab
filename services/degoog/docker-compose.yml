@@ -1,0 +1,9 @@
+services:
+  degoog:
+    image: ghcr.io/fccview/degoog:latest
+    container_name: degoog
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "4444:4444"
+    restart: unless-stopped

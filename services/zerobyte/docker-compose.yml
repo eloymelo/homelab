@@ -1,6 +1,6 @@
 services:
   zerobyte:
-    image: ghcr.io/nicotsx/zerobyte:v0.25
+    image: ghcr.io/nicotsx/zerobyte:v0.41
     container_name: zerobyte
     restart: unless-stopped
     cap_add:
@@ -9,13 +9,11 @@ services:
       - "4096:4096"
     devices:
       - /dev/fuse:/dev/fuse
-    environment:
-      - TZ=America/Fortaleza # Set your timezone here
-      - BASE_URL=http://localhost:4096 # URL you will use to access Zerobyte
-      - APP_SECRET=change_me_generate_a_random_secret # Generate your own secret with `openssl rand -hex 32`
+    env_file:
+      - .env
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/lib/zerobyte:/var/lib/zerobyte
-      - /home/titan:/home # Change it to the path you want to backup
-      - /media/backup1:/backup1 # Optional
-      - /media/backup2:/backup2 # Optional
+      - /home/titan:/home        # Change to the path you want to back up
+      - /media/backup1:/backup1  # Optional
+    # - /media/backup2:/backup2  # Optional

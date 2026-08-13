@@ -1,0 +1,22 @@
+###################################################
+# NOTE: this is the DEVELOPMENT compose file from the
+# Actual Budget source repo. It builds from a local
+# Dockerfile and bind-mounts the source tree, so it
+# only works from inside a checkout of that repo.
+#
+# For a normal self-hosted deployment, use the
+# published server image instead. See README.md.
+###################################################
+
+services:
+  actual-development:
+    build: .
+    image: actual-development
+    container_name: actual
+    environment:
+      - HTTPS
+    ports:
+      - '3004:3001'
+    volumes:
+      - '.:/app'
+    restart: 'no'

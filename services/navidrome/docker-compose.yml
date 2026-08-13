@@ -1,0 +1,14 @@
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    container_name: navidrome
+    user: 1000:1000   # should own the mounted volumes
+    ports:
+      - "4533:4533"
+    restart: unless-stopped
+    environment:
+      ND_SCANSCHEDULE: 1h
+      #ND_BASEURL: https://navidrome.your-domain.com
+    volumes:
+      - "/home/titan/navidrome/data:/data"
+      - "/home/titan/navidrome/music:/music:ro"

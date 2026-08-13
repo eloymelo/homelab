@@ -1,0 +1,15 @@
+services:
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Fortaleza   # Set your timezone here
+    volumes:
+      - /home/titan/radarr/config:/config
+      - /home/titan/jellyfin/movies:/movies
+      - /home/titan/qbittorrent/downloads:/downloads
+    ports:
+      - 7878:7878
+    restart: unless-stopped

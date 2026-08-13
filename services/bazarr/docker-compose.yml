@@ -1,0 +1,15 @@
+services:
+  bazarr:
+    image: lscr.io/linuxserver/bazarr:latest
+    container_name: bazarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Fortaleza   # Set your timezone here
+    volumes:
+      - /home/titan/bazarr/config:/config
+      - /home/titan/jellyfin/movies:/movies
+      - /home/titan/jellyfin/tv-shows:/tv
+    ports:
+      - 6767:6767
+    restart: unless-stopped

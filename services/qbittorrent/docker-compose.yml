@@ -1,0 +1,17 @@
+services:
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Fortaleza   # Set your timezone here
+      - WEBUI_PORT=8091
+    volumes:
+      - /home/titan/qbittorrent/config:/config
+      - /home/titan/qbittorrent/downloads:/downloads
+    ports:
+      - 8091:8091
+      - 6881:6881
+      - 6881:6881/udp
+    restart: unless-stopped

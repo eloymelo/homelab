@@ -1,0 +1,18 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    user: 1000:1000
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - JELLYFIN_PublishedServerUrl=https://jellyfin.your-domain.com
+    ports:
+      - 8096:8096
+    volumes:
+      - /home/titan/jellyfin/config:/config
+      - /home/titan/jellyfin/cache:/cache
+      - /home/titan/jellyfin/movies:/movies
+      - /home/titan/jellyfin/tv-shows:/tv-shows
+    restart: unless-stopped

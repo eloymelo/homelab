@@ -1,0 +1,9 @@
+services:
+  byparr:
+    image: ghcr.io/thephaseless/byparr:latest
+    container_name: byparr
+    environment:
+      - TZ=America/Fortaleza   # Set your timezone here
+    ports:
+      - 8191:8191
+    restart: unless-stopped

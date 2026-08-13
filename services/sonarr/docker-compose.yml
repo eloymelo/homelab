@@ -1,0 +1,15 @@
+services:
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Fortaleza   # Set your timezone here
+    volumes:
+      - /home/titan/sonarr/config:/config
+      - /home/titan/jellyfin/tv-shows:/tv
+      - /home/titan/qbittorrent/downloads:/downloads
+    ports:
+      - 8989:8989
+    restart: unless-stopped

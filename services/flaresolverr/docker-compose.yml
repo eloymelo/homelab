@@ -1,0 +1,10 @@
+services:
+  flaresolverr:
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    container_name: flaresolverr
+    environment:
+      - LOG_LEVEL=info
+      - TZ=America/Fortaleza   # Set your timezone here
+    ports:
+      - 8192:8191   # host port shifted, Byparr already holds 8191
+    restart: unless-stopped
